@@ -8,6 +8,7 @@ import time
 class Monster():
     alive = True
     hp = 100
+    
     def __init__(self,name):
         self.name = name
         self.max_hp = self.hp
@@ -52,7 +53,7 @@ class Monster():
 #나쁜 몬스터 속성
 class EvilMonster(Monster):
     hp = random.randint(110, 140) #악당 hp는 랜덤하게 등장!
-    power = 10
+    power = 11
     name = '드래곤'
     def __init__(self):
         self.max_hp = self.hp
