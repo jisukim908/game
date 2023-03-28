@@ -52,7 +52,7 @@ class Monster():
 
 #나쁜 몬스터 속성
 class EvilMonster(Monster):
-    hp = random.randint(110, 140) #악당 hp는 랜덤하게!
+    hp = random.randint(120, 150) #악당 hp는 랜덤하게!
     power = 12
     name = '드래곤'
     def __init__(self):
