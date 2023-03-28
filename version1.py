@@ -15,11 +15,11 @@ class Monster():
 
     #일반스킬
     def attack(self,other):
-        damage = random.randint(self.power-5,self.power+2)
+        damage = random.randint(self.power-5,self.power+1)
         other.hp = max(other.hp - damage, 0)
         heal = random.randint(1,5)
         self.hp += heal
-        if damage < self.power:
+        if damage < self.power-3:
             print(f'{self.name}의 공격 miss!! {other.name}에게 {damage}의 데미지를 입혔습니다. {self.name}은 {heal}의 hp를 회복했습니다.')
         else:
             print(f'{self.name}의 공격! {other.name}에게 {damage}의 데미지를 입혔습니다. {self.name}은 {heal}의 hp를 회복했습니다.')
@@ -53,13 +53,13 @@ class Monster():
 #나쁜 몬스터 속성
 class EvilMonster(Monster):
     hp = random.randint(110, 140) #악당 hp는 랜덤하게!
-    power = 11
+    power = 12
     name = '드래곤'
     def __init__(self):
         self.max_hp = self.hp
 
     def attack(self, other):
-        damage = random.randint(self.power - 3, self.power + 3)
+        damage = random.randint(self.power - 5, self.power + 3)
         other.hp = max(other.hp - damage, 0)
         if damage < self.power:
             print(f'{self.name}의 공격 miss!! {other.name}에게 {damage}의 데미지를 입혔습니다.')
