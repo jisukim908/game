@@ -68,7 +68,6 @@ class EvilMonster(Monster):
 
 #착한 몬스터 1: 파워: 강, 회복력: 보통 , hp: 보통
 class FireMonster(Monster):
-    hp = 100
     power = 12
     heal = 10
     def __init__(self,name):
@@ -78,7 +77,6 @@ class FireMonster(Monster):
 
 #착한 몬스터 2: 파워: 보통, 회복력: 강, hp: 보통
 class WaterMonster(Monster):
-    hp = 100
     power = 10
     heal = 12
     def __init__(self,name):
